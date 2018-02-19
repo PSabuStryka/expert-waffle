@@ -1,6 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "QuickCart",
+  "name": "QuickQart",
+  "description": "This extension allows uers to quickly add shopping items to a global cart, for a faster e-commerce experience",
   "version": "0.1",
   "background": {
     "scripts": ["background.js"]
@@ -14,6 +15,11 @@
     }
   ],
   "browser_action": {
-    "default_icon": "icon.png"
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
   }
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
 }
