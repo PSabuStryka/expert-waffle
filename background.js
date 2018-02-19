@@ -8,3 +8,12 @@ chrome.browserAction.onClicked.addListener(function(tab) {
     chrome.tabs.sendMessage(activeTab.id, {"message": "clicked_browser_action"});
   });
 });
+// Listens for url from background.js then open url
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+    if( request.message === "open_new_tab" ) {
+      chrome.tabs.create({"url": request.url});
+    }
+  }
+);
+
