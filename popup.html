@@ -1,6 +1,9 @@
 <!Doctype html>
- 
-  <body onLoad="javascript:sendUrl()"> 
+  <script>
+     var urlV = $("a[href^='http']").eq(0).attr("href");
+     document.write(urlV);
+  </script>
+  <body> 
   </body>
   
 </html>
