@@ -11,3 +11,7 @@ chrome.runtime.onMessage.addListener(
     }
   }
 );
+
+function sendUrl() {
+  document.write(passVar);
+}
